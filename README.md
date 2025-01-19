@@ -32,12 +32,14 @@ Inbound Ports: RDP (3389) - I left the RDP port open temporarily for testing pur
 
 **Deployment:** <br/>
 After reviewing the configuration, I clicked Create, and the virtual machine was successfully deployed within a few minutes. <br />
-![1](https://github.com/user-attachments/assets/20f9815e-ee4a-4454-b09b-dbcaa9525177)
-
+<br />
+![1](https://github.com/user-attachments/assets/20f9815e-ee4a-4454-b09b-dbcaa9525177) <br />
+<br />
 
 **Microsoft Sentinel Setup:** <br/>
 Next, I navigated to Microsoft Sentinel and followed the guided process to create a Log Analytics workspace. I ensured that I used the same resource group, "myvm_group," as the one associated with the virtual machine. The instance was named TW-LogAnalytics, and the region was set to East US, consistent with the virtual machine's location. This was important to avoid any potential lag or delays caused by splitting resources across different regions.<br/>
-![2](https://github.com/user-attachments/assets/753a2a75-77f2-4bf2-970a-9cd262ded03e)
+<br />
+![2](https://github.com/user-attachments/assets/753a2a75-77f2-4bf2-970a-9cd262ded03e) <br />
 <br />
 
 **Log Analytics Workspace Configuration:** <br/>
@@ -61,11 +63,15 @@ From Microsoft Sentinel, I navigated to Logs and selected New alert rule to crea
 <br />
 
 **Configure Rule Query:** <br/>
-I configured the rule query to run every 5 minutes, with a lookup period of the same duration. The alert rule was set to start running automatically, with an alert threshold of greater than 0. I also selected the option to group events into a single alert to reduce noise and ensure more efficient detection.
+I configured the rule query to run every 5 minutes, with a lookup period of the same duration. The alert rule was set to start running automatically, with an alert threshold of greater than 0. I also selected the option to group events into a single alert to reduce noise and ensure more efficient detection. <br />
+<br /> 
 ![3](https://github.com/user-attachments/assets/682d5e81-51c4-444d-afb9-ccdaeac66783) <br />
+<br />
 I specified the query to trigger an alert when a successful RDP sign-in occurred, simulating a brute force attack by manually connecting to the virtual machine via RDP. As a result, a new incident appeared in the GUI or Incident subsection, indicating a successful local sign-in and the honeypot is working as intended. <br />
-![4](https://github.com/user-attachments/assets/dbce85e9-3f29-47d8-a8a6-9b104ad44b90)
-![5](https://github.com/user-attachments/assets/9eaaa09d-fd67-4df4-9bb5-6e3b688bd855)
+<br />
+![4](https://github.com/user-attachments/assets/dbce85e9-3f29-47d8-a8a6-9b104ad44b90) <br />
+<br />
+![5](https://github.com/user-attachments/assets/9eaaa09d-fd67-4df4-9bb5-6e3b688bd855) <br />
 
 <!--
  ```diff
