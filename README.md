@@ -37,7 +37,7 @@ After reviewing the configuration, I clicked Create, and the virtual machine was
 <br />
 
 **Microsoft Sentinel Setup:** <br/>
-Next, I navigated to Microsoft Sentinel and followed the guided process to create a Log Analytics workspace. I ensured that I used the same resource group, "myvm_group," as the one associated with the virtual machine. The instance was named TW-LogAnalytics, and the region was set to East US, consistent with the virtual machine's location. This was important to avoid any potential lag or delays caused by splitting resources across different regions.<br/>
+Next, I navigated to Microsoft Sentinel and followed the guided process to create a Log Analytics workspace. I ensured that I used the same resource group, myvm_group, as the one associated with the virtual machine. The instance was named TW-LogAnalytics, and the region was set to East US, consistent with the virtual machine's location. This was important to avoid any potential lag or delays caused by splitting resources across different regions.<br/>
 <br />
 ![2](https://github.com/user-attachments/assets/753a2a75-77f2-4bf2-970a-9cd262ded03e) <br />
 <br />
@@ -58,7 +58,7 @@ After successfully installing the Windows Security Events via AMA, I opened the 
 <br />
 
 **Create Microsoft Sentinel Alert Rule:** <br/>
-From Microsoft Sentinel, I navigated to Logs and selected New alert rule to create a custom alert. I named the rule "Successful Local Sign-Ins," set the severity to Medium, and assigned the MITRE ATT&CK tactic of Initial Access. <br />
+From Microsoft Sentinel, I navigated to Logs and selected New alert rule to create a custom alert. I named the rule Successful Local Sign-Ins, set the severity to Medium, and assigned the MITRE ATT&CK tactic of Initial Access. <br />
 
 <br />
 
